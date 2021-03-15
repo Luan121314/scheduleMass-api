@@ -4,7 +4,6 @@ import cors from 'cors';
 import './database';
 import routes from './Routes';
 import handlerErrors from './error/handlerErrors';
-import { visitLexicalEnvironment } from 'typescript';
 
 const app = express();
 app.use(cors());
