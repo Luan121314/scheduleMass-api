@@ -1,0 +1,61 @@
+<style>
+    #containerSendMailer {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #containerSendMailer .text-password {
+        text-align: center;
+        background-color: #fff3cd;
+        border: 2px solid #ffecb5;
+        color: #664d03;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #containerSendMailer a{
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+<div id="containerSendMailer">
+    <label>Olá <strong>{{name}}</strong>! Tudo bem ?</label>
+    <br />
+
+    <strong>Sua reserva foi realizada ! 😃</strong>
+
+    <br />
+    <br />
+
+    <strong>Aqui está os detalhes </strong>
+
+    <div className="content">
+        <p className="data">
+            <span><strong>Nome: </strong> {{user.name}}</span><br />
+            <span><strong>Email: </strong> {{user.email}}</span><br />
+            <span><strong>Celular: </strong> {{user.phone}}</span><br />
+            <span><strong>Reservas: </strong> {{companion}}</span><br />
+            <span><strong>Comunidade: </strong> {{community.name}}</span><br />
+            <span><strong>Endereço: </strong> {{community.address}}</span><br />
+            <span><strong>Horário: </strong> {{community.time}}</span><br />
+        </p>
+
+        <p>
+            <span>Essa é sua senha, apresente na entrada.</span>
+        <div className="text-password">
+            <h2>{{password}}</h2>
+        </div>
+        </p>
+    </div>
+
+    <div class="cancel-inscription">
+        <span>Caso tenha algum imprevisto, cancele a reserva neste link abaixo </span>
+        <br>
+        <a class="value" href="{{baseUrl}}/reservations/0/cancels/{{id}}">cancelar reserva</a>
+    </div>
+    <h4>Equipe | <strong>{{title}}</strong></h4>
+</div>
